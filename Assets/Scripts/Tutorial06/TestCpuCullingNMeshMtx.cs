@@ -6,12 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using static UnityEngine.Mesh;
 
-public struct MeshInfo
-{
-    public int MeshIndex;
-    public Vector3 Center;
-    public float Radius;
-}
+
 
 public class TestCpuCullingNMeshMtx : MonoBehaviour
 {
