@@ -41,6 +41,18 @@ public static class CullUtils
         return true;
     }
 
+    public static bool FrustumCullSphere2(NativeArray<float4> FrustumPlanes, float3 center, float radius)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            float3 planeNormal = FrustumPlanes[j].xyz;
+            float planeConstant = FrustumPlanes[j].w;
+            if (math.dot(FrustumPlanes[j], new float4(center.x, center.y, center.z, 1.0f)) + radius < 0)
+                return false;
+        }
+        return true;
+    }
+
     public static (Vector3,float) GetSphereBounds(List<Vector3> triangle_vertices)
     {
         Vector3 center = new Vector3(0, 0, 0);
