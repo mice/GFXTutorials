@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -41,6 +42,8 @@ public static class CullUtils
         return true;
     }
 
+
+    [BurstCompile]
     public static bool FrustumCullSphere2(NativeArray<float4> FrustumPlanes, float3 center, float radius)
     {
         for (int j = 0; j < 6; j++)

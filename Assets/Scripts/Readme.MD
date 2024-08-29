@@ -54,3 +54,12 @@ cpuculling
 # Lession09
 cpuculling
 10000:2.7MS
+
+# Lession10
+IJojb
+release model:10000:2.35~2.45MS
+burst Release:10000:2.4MS
+IjobFor
+release model:10000:2.39~2.49MS
+burst Release:10000:0.26MS
+使用job来处理culling.
