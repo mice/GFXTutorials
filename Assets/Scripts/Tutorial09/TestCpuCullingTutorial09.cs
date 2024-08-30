@@ -40,8 +40,8 @@ public class TestCpuCullingTutorial09 : MonoBehaviour
     private int[] objectTextures;
     private int[] matrixIndexData;
     private int[] meshIndexData;
-    private int[] meshCountData;//Ã¿¸ömesh¶ÔÓ¦µÄ×ÜÊıÁ¿.
-    private int[] meshInstanceStartData;//Ã¿¸ömesh¶ÔÓ¦µÄ×ÜÊıÁ¿.
+    private int[] meshCountData;//æ¯ä¸ªmeshå¯¹åº”çš„æ€»æ•°é‡.
+    private int[] meshInstanceStartData;//æ¯ä¸ªmeshå¯¹åº”çš„æ€»æ•°é‡.
     private SubDrawData[] subDrawDatas;
     List<MeshFilter> meshFilters;
     List<int> meshIndex;
@@ -239,7 +239,7 @@ public class TestCpuCullingTutorial09 : MonoBehaviour
             subDrawDatas[i].count = 0;
         }
         TotalVisibleCount = 0;
-        //¿ÉÒÔ¼õÉÙÒ»´Îsort
+        //å¯ä»¥å‡å°‘ä¸€æ¬¡sort
         for (int i = 0; i < this.positions.Length; i++)
         {
             var tIndex = meshIndexData[i];

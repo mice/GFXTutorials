@@ -220,7 +220,7 @@ public class TestCpuCullingTutorial08 : MonoBehaviour
             subDrawDatas[i].count = 0;
         }
         TotalVisibleCount = 0;
-        //NÏßÐÔ
+        //Nçº¿æ€§
         for (int i = 0; i < this.meshFilters.Count; i++)
         {
             var tIndex = meshIndexData[i];

@@ -9,17 +9,17 @@ using Unity.Mathematics;
 public struct CullingJobs : IJobFor
 {
     [ReadOnly] public NativeArray<float4> planefloat4s;//frustum;
-    [ReadOnly] public NativeArray<MeshInfo> MeshInfoList;//meshÏà¹ØĞÅÏ¢.
+    [ReadOnly] public NativeArray<MeshInfo> MeshInfoList;//meshç›¸å…³ä¿¡æ¯.
     [ReadOnly] public NativeArray<float3> positions;
-    [ReadOnly] public NativeArray<int> meshIndexData;//µ±Ç°ÏÔÊ¾¶ÔÏó¶ÔÓ¦µÄmesh µÄindex;
-    [ReadOnly] public NativeArray<int> meshInstanceStartData;//mesh ¶ÔÓ¦µÄÊıÁ¿
-    public NativeArray<int> matrixIndexData;//µ±Ç°ÏÔÊ¾¶ÔÏó¶ÔÓ¦µÄMatrixµÄindex;
+    [ReadOnly] public NativeArray<int> meshIndexData;//å½“å‰æ˜¾ç¤ºå¯¹è±¡å¯¹åº”çš„mesh çš„index;
+    [ReadOnly] public NativeArray<int> meshInstanceStartData;//mesh å¯¹åº”çš„æ•°é‡
+    public NativeArray<int> matrixIndexData;//å½“å‰æ˜¾ç¤ºå¯¹è±¡å¯¹åº”çš„Matrixçš„index;
     public NativeArray<int> subDrawDatas;
 
     [BurstCompile]
     public void Execute(int i)
     {
-        //NÏßĞÔ
+        //Nçº¿æ€§
         //for (int i = 0; i < this.positions.Length; i++)
         {
             var tIndex = meshIndexData[i];

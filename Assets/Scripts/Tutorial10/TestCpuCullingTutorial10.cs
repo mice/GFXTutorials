@@ -47,8 +47,8 @@ public class TestCpuCullingTutorial10 : MonoBehaviour
     private int[] objectTextures;
     private SharedArray<int> matrixIndexData;
     private SharedArray<int> meshIndexData;
-    private int[] meshCountData;//Ã¿¸ömesh¶ÔÓ¦µÄ×ÜÊıÁ¿.
-    private SharedArray<int> meshInstanceStartData;//Ã¿¸ömesh¶ÔÓ¦µÄ×ÜÊıÁ¿.
+    private int[] meshCountData;//æ¯ä¸ªmeshå¯¹åº”çš„æ€»æ•°é‡.
+    private SharedArray<int> meshInstanceStartData;//æ¯ä¸ªmeshå¯¹åº”çš„æ€»æ•°é‡.
     private SubDrawData[] subDrawDatas;
     List<MeshFilter> meshFilters;
     List<int> meshIndex;
@@ -256,7 +256,7 @@ public class TestCpuCullingTutorial10 : MonoBehaviour
             meshInstanceStartData = meshInstanceStartData,
             matrixIndexData = matrixIndexData,
             subDrawDatas = tmp_subDrawDatas
-        };        //¿ÉÒÔ¼õÉÙÒ»´Îsort
+        };        //å¯ä»¥å‡å°‘ä¸€æ¬¡sort
 
         //cullingJob.Execute();
         cullingJob.Run(positions.Length);
